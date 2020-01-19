@@ -1,0 +1,12 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int b = 0, x, c = 0;
+	cout << "Введите два переменных b и c" << endl;
+	cin >> b;
+	cin >> c;
+	cout << "x=" << (b == 0 && c == 0 ? "Любой корень" : b != 0 ? to_string((float)-c / b) : "Нет корней");
+}
