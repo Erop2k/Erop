@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	double a, b, c, x;
+	cout << "Введите a:  ";
+	cin >> a;
+	cout << "Введите b:  ";
+	cin >> b;
+	cout << "Введите c:  ";
+	cin >> c;
+	if (a == 0, b == 0, c == 0)
+		cout << "Любой корень";
+	else {
+		if ((b * b - 4 * a * c) >= 0)
+		{
+			x = (-b + sqrt(b * b - 4 * a * c)) / (2 * a);
+			cout << "x1=  " << x << endl;
+			x = (-b - sqrt(b * b - 4 * a * c)) / (2 * a);
+			cout << "x2=  " << x << endl;
+		}
+		else
+		{
+			cout << "Дискриминант меньше 0, корни невещественные";
+		}
+	}
+
+}
