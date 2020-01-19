@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+using  namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	double m, S, n, p, r;
+	cout << "Введите сколько взяли: "; cin >> S;
+	cout << "Введите на какой срок (в годах): "; cin >> n;
+	cout << "Введите под какой процент: "; cin >> p;
+	
+	r = p / 100;
+	cout << "r= " << r << endl;
+	m = (S * r * (pow(1 + r, n))) / (12 * ((pow(1 + r, n)) - 1));
+	cout << "m = " << m;
+}
