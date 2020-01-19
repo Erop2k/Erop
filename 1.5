@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int time, curtains, lamp;
+	cout << "Введите время (без двоеточия между часами и минутами)" << endl;
+	cin >> time;
+	cout << "Шторы закрыты/открыты(1/0)" << endl;
+	cin >> curtains;
+	cout << "Лампа вкл/выкл(1/0)" << endl;
+	cin >> lamp;
+
+	bool lampOn = lamp == 1;
+	bool curtainsClosed = curtains == 1;
+	bool isDay = time > 900 && time < 2000;
+
+	cout << ((lampOn || (!curtainsClosed && isDay)) ? "Светло" : "Темно");
+}
