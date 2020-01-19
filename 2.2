@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	float x, a, w;
+	cout << "Введите a: "; cin >> a;
+	cout << "Введите x: "; cin >> x;
+	if (abs(x) >= 1)
+	{
+		if ((a - x * x) < 0)
+		{
+			cout << "Функция не определена при данных значениях";
+		}
+		else
+		{
+			w = sqrt(a - x * x);
+			cout << "w = " << w << endl;
+
+		}
+	}
+	else
+	{
+		if (x == 0)
+		{
+			cout << "Функция не определена.";
+		}
+		else
+		{
+			w = a * log(abs(x));
+			cout << "w = " << w << endl;
+		}
+	}
+}
