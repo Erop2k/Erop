@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	float R, r, h, l;
+	int S, V;
+	cout << "Введите R: "; cin >> R;
+	cout << "Введите r: "; cin >> r;
+	cout << "Введите h: "; cin >> h;
+	cout << "Введите l: "; cin >> l;
+	
+	S = 3.14 * ((R * R) + (R + r) * l + (r * r));
+	cout << "S = " << S << endl;
+	V = (3.14 * h * ((R * R) + R * r + (r * r))) / 3;
+	cout << "V = " << V << endl;
+}
